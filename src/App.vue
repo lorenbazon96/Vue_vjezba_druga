@@ -1,10 +1,10 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <HelloWorld />
 </template>
+
+<script setup>
+import HelloWorld from "./components/HelloWorld.vue";
+</script>
 
 <style lang="scss">
 #app {
