@@ -1,9 +1,9 @@
 <template>
-  <HelloWorld />
+  <Vjezba />
 </template>
 
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import Vjezba from "./components/Vjezba.vue";
 </script>
 
 <style lang="scss">
