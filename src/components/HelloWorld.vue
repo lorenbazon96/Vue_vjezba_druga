@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-      <h2>Korisnički podaci</h2>
       <div id="korisnik"></div>
     </div>
     <div class="">
@@ -57,7 +56,7 @@ function dohvatiCijenu(naziv) {
 
 function sveukupnaCijena() {
   return korisnik.kosarica
-    .reduce((ukupno, stavke) => {
+    .reduce((ukupno, stavka) => {
       return ukupno + dohvatiCijenu(stavka.naziv) * stavka.količina;
     }, 0)
     .toFixed(2);
@@ -84,7 +83,7 @@ onMounted(() => {
   const klasa = korisnik.jeAdmin ? "admin" : "user";
 
   korisnikDiv.innerHTML = `
-    <h3 class="${klasa}">Korisnički podaci</h3>
+    <h2 class="${klasa}">Korisnički podaci</h2>
     <p class="${klasa}"><strong>Ime:</strong> ${korisnik.osobni_podaci.ime} ${korisnik.osobni_podaci.prezime}</p>
     <p class="${klasa}"><strong>Adresa:</strong> ${korisnik.osobni_podaci.adresa.ulica} ${korisnik.osobni_podaci.adresa.broj}, ${korisnik.osobni_podaci.adresa.grad}</p>
     <p class="${klasa}"><strong>Telefon:</strong> ${korisnik.osobni_podaci.broj_telefona}</p>
